@@ -535,7 +535,7 @@ def train_linear_regression(model_object, training_predictor_table,
     """
 
     model_object.fit(
-        X=training_predictor_table.as_matrix(),
+        X=training_predictor_table.values,
         y=training_target_table[TARGET_NAME].values
     )
 
@@ -858,7 +858,7 @@ def train_logistic_regression(model_object, training_predictor_table,
     """
 
     model_object.fit(
-        X=training_predictor_table.as_matrix(),
+        X=training_predictor_table.values,
         y=training_target_table[BINARIZED_TARGET_NAME].values
     )
 
@@ -1035,7 +1035,7 @@ def train_classification_tree(model_object, training_predictor_table,
     """
 
     model_object.fit(
-        X=training_predictor_table.as_matrix(),
+        X=training_predictor_table.values,
         y=training_target_table[BINARIZED_TARGET_NAME].values
     )
 
@@ -1075,7 +1075,7 @@ def train_classification_forest(model_object, training_predictor_table,
     """
 
     model_object.fit(
-        X=training_predictor_table.as_matrix(),
+        X=training_predictor_table.values,
         y=training_target_table[BINARIZED_TARGET_NAME].values
     )
 
@@ -1117,7 +1117,7 @@ def train_classification_gbt(model_object, training_predictor_table,
     """
 
     model_object.fit(
-        X=training_predictor_table.as_matrix(),
+        X=training_predictor_table.values,
         y=training_target_table[BINARIZED_TARGET_NAME].values
     )
 
@@ -1132,7 +1132,7 @@ def cross_validation():
         training_target_table=training_target_table)
 
     validation_predictions = linreg_model_object.predict(
-        validation_predictor_table.as_matrix()
+        validation_predictor_table.values
     )
 
     _ = evaluate_regression(
