@@ -582,7 +582,7 @@ def train_linear_regression(model_object, training_predictor_table,
     """
 
     model_object.fit(
-        X=training_predictor_table.as_matrix(),
+        X=training_predictor_table,
         y=training_target_table[TARGET_NAME].values
     )
 
@@ -922,7 +922,7 @@ def train_logistic_regression(model_object, training_predictor_table,
     """
 
     model_object.fit(
-        X=training_predictor_table.as_matrix(),
+        X=training_predictor_table,
         y=training_target_table[BINARIZED_TARGET_NAME].values
     )
 
@@ -1162,7 +1162,7 @@ def train_classification_tree(model_object, training_predictor_table,
     """
 
     model_object.fit(
-        X=training_predictor_table.as_matrix(),
+        X=training_predictor_table,
         y=training_target_table[BINARIZED_TARGET_NAME].values
     )
 
@@ -1200,7 +1200,7 @@ def train_classification_forest(model_object, training_predictor_table,
     """
 
     model_object.fit(
-        X=training_predictor_table.as_matrix(),
+        X=training_predictor_table,
         y=training_target_table[BINARIZED_TARGET_NAME].values
     )
 
@@ -1240,7 +1240,7 @@ def train_classification_gbt(model_object, training_predictor_table,
     """
 
     model_object.fit(
-        X=training_predictor_table.as_matrix(),
+        X=training_predictor_table,
         y=training_target_table[BINARIZED_TARGET_NAME].values
     )
 
@@ -1271,7 +1271,7 @@ def train_classification_SVM(model_object, training_predictor_table,training_tar
     """
 
     model_object.fit(
-        X=training_predictor_table.as_matrix(),
+        X=training_predictor_table,
         y=training_target_table[BINARIZED_TARGET_NAME].values
     )
 
@@ -1304,7 +1304,7 @@ def train_classification_MLP(model_object, training_predictor_table,
     """
 
     model_object.fit(
-        X=training_predictor_table.as_matrix(),
+        X=training_predictor_table,
         y=training_target_table[BINARIZED_TARGET_NAME].values
     )
 
